@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IpagooWeb", "Ipagoo.Library.Web\IpagooWeb.csproj", "{89994957-3A8B-4940-8F5A-225645703871}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ipagoo.Library.DataAccess", "Ipagoo.Library.DataAccess\Ipagoo.Library.DataAccess.csproj", "{624E7744-FDBA-4B50-BB27-E998F4D7635C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ipagoo.Library.Services", "Ipagoo.Library.Services\Ipagoo.Library.Services.csproj", "{01C19A6B-2E92-4DE0-BBE9-2D3FD7B5F1F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ipagoo.Library.Domain", "Ipagoo.Library.Domain\Ipagoo.Library.Domain.csproj", "{FA2AAA5D-ACBE-4038-B5EA-0F6B922DA8A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ipagoo.Library.Test", "Ipagoo.Library.Test\Ipagoo.Library.Test.csproj", "{B5A61E4D-513D-479C-B384-65E0E0E2DB4C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89994957-3A8B-4940-8F5A-225645703871}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89994957-3A8B-4940-8F5A-225645703871}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89994957-3A8B-4940-8F5A-225645703871}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89994957-3A8B-4940-8F5A-225645703871}.Release|Any CPU.Build.0 = Release|Any CPU
+		{624E7744-FDBA-4B50-BB27-E998F4D7635C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{624E7744-FDBA-4B50-BB27-E998F4D7635C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{624E7744-FDBA-4B50-BB27-E998F4D7635C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{624E7744-FDBA-4B50-BB27-E998F4D7635C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01C19A6B-2E92-4DE0-BBE9-2D3FD7B5F1F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01C19A6B-2E92-4DE0-BBE9-2D3FD7B5F1F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01C19A6B-2E92-4DE0-BBE9-2D3FD7B5F1F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01C19A6B-2E92-4DE0-BBE9-2D3FD7B5F1F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA2AAA5D-ACBE-4038-B5EA-0F6B922DA8A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA2AAA5D-ACBE-4038-B5EA-0F6B922DA8A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA2AAA5D-ACBE-4038-B5EA-0F6B922DA8A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA2AAA5D-ACBE-4038-B5EA-0F6B922DA8A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5A61E4D-513D-479C-B384-65E0E0E2DB4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5A61E4D-513D-479C-B384-65E0E0E2DB4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5A61E4D-513D-479C-B384-65E0E0E2DB4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5A61E4D-513D-479C-B384-65E0E0E2DB4C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

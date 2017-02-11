@@ -1,0 +1,140 @@
+﻿@model IEnumerable<Ipagoo.Library.Domain.Models.Book>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+<style type="text/css">
+	table {width:94%;}
+	 table thead tr td ,table tbody tr td{
+		 width:19%;border:solid thin;padding:10px;
+	 }
+	 table#tblmain thead tr{background-color:darkorange;text-align: center;}
+	table#tblmain tbody tr:nth-child(odd){
+		background-color:aquamarine;
+	}        
+	table#tblmain tbody tr:nth-child(even){
+		background-color:gainsboro;
+	}
+
+	table#tblmain  > tbody tr:hover
+	{
+		background-color:teal;
+	}
+	table#tblDetail{ background-color: silver;}
+</style>
+<div class="jumbotron">
+	<h1>ASP.NET</h1>
+	<p class="lead">Ipagoo Home Library System</p>
+	<p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+<form action='@Url.Action("SearchBooks","Home")' method="POST">
+<div class="row">
+	<h4>Search Library Books</h4>
+	<div class="form-group">
+		<label class="control-label">ISBN</label><br/>
+		<input type="text" class="form-control"name="Isbn"  id="Isbn"/>
+	</div>
+	<div class="form-group">
+		<label class="control-label">Title</label><br/>
+		<input type="text" class="form-control"name="Title"  id="title"/>
+	</div>
+	<div class="form-group">
+		<label class="control-label">Author</label><br/>
+		<input type="text" class="form-control" name="Author" id="author"/>
+	</div>
+	<div class="form-group">
+		<label class="control-label">Genre</label><br/>
+		<input type="text" class="form-control" name="Genre" id="genre"/>
+	</div>	
+	<div class="form-group">
+		<button type="submit" class="btn-primary" name="SubmitSearch">Search Library</button>
+	</div>
+</div>
+</form>
+<div style="margin-bottom: 1%;">&nbsp;</div>
+<div class="row">
+    <div class="col-md-8">
+        <h2>Home Library System</h2>
+        <p>
+            <table id='tblmain'>
+                <thead>
+                    <tr class="table-header">
+                        <th>ISBN</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Genre</th>
+                        <th>Is On Loan</th>
+                        <th class="hidden">Genre</th>
+                        <th class="hidden">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null)
+                    {
+                        foreach (var book in Model)
+                        {
+                            <tr class="table-row">
+                                <td name="Isbn">@book.Isbn</td>
+                                <td name="Title">@book.Title</td>
+                                <td name="Author">@book.Author</td>
+                                <td name="Genre">@book.Genre</td>
+                                <td name="IsOnLoan">@book.IsOnLoan.ToString()</td>
+                                <td name="Genre"  class="hidden">@book.Genre</td>
+                                <td name="Description" class="hidden">@book.Description</td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Web Hosting</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>
+<div id="dialog" style="display:none;" title="Library Book Loan Details">
+    <table id="tblDetail">
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+    </table>
+</div>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $('tr.table-row').click(function () {
+
+            var tds = $(this).find('td');
+            var index = 0;
+            $('table#tblDetail tr').each(function() {
+                $(this).find('td').text($(tds[index]).text());
+                index++;
+            });
+			$('table#tblDetail tr.hidden').each(function() {
+                $(this).find('td').text($(tds[index]).text());
+                index++;
+            });
+			$('#dialog').dialog('open');
+        });	
+			
+	$('div#dialog').dialog({autoOpen:false});
+});
+</script>
